@@ -1,0 +1,7 @@
+Wordpress install scanner
+1. Install httpx
+https://github.com/projectdiscovery/httpx
+2. Find target?
+shodan: http.title:""WordPress &rsaquo; Installation"
+3. run this command
+cat file.txt | httpx -silent -status-code -follow-redirects | grep -oP '\bhttps?://[^ ]+?/wp-admin/install\.php\b' > saved.txt
